@@ -1,0 +1,165 @@
+/* General styles for body and html */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Ensure vertical scrollbar is hidden */
+  font-family: Arial, sans-serif; /* Set a fallback font */
+}
+
+/* Styles for header */
+.header-background {
+  background-image: url('../../assets/background4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.5);
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 75vh;
+}
+/* Styling for navigation links */
+.logo {
+  font-size: 15px;
+  text-decoration: none;
+  color: #ffffff; /* Set color to white */
+  position: relative; /* Ensure links are positioned correctly */
+  z-index: 2; /* Ensure links are above the background image */
+}
+
+ul.unordered-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  z-index: 2; /* Ensure list is above the background image */
+}
+
+ul.unordered-list li {
+  margin-left: 15px;
+}
+
+ul.unordered-list .user-icon {
+  margin-left: auto;
+}
+
+ul.unordered-list a:hover {
+  text-decoration: underline;
+}
+
+.hello {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2; /* Ensure icon is above the background image */
+}
+
+.hello1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  text-decoration: none;
+  z-index: 2; /* Ensure text is above the background image */
+}
+
+.title {
+  color: white;
+  position: absolute;
+  top: 36%;
+  font-size: 12vmin;
+  letter-spacing: 0.3vmin;
+  z-index: 2; /* Ensure title is above the background image */
+  width: 100%;
+}
+
+/* Content section styles */
+.content h2 {
+  font-size: 40px;
+  /* Adjust font size for smaller screens */
+  text-transform: uppercase;
+}
+
+.text {
+  color: rgb(0, 0, 0);
+}
+
+.img-section {
+  text-align: center;
+}
+
+.img {
+  margin-top: 20px;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.text1 {
+  color: white;
+}
+
+.button{
+        background-color: rgb(139, 4, 4);
+        border: 0.2vmin solid rgb(139, 4, 4);
+        color: white;
+        font-size: 2.7vmin;
+        padding: 1.5vmin 4vmin;
+        text-decoration: none;
+        margin-bottom: 5vmin;
+        width: fit-content;
+}
+
+/* Media query for screens smaller than 768px (tablet and below) */
+@media (max-width: 768px) {
+  header {
+    height: 40vh; /* Reduce header height for smaller screens */
+    background-position: center;
+    background-image: url(../../assets/1_cQiaTMh5jgkfPDaMMmzyiQ.webp);
+  }
+  .contain{
+    padding-right: 3vmin !important;
+    padding-left: 3vmin !important;
+  }
+
+  .title {
+    top: 20%;
+    font-size: 8vmin;
+  }
+
+  .unordered-list {
+    flex-direction: column; /* Stack navigation links vertically */
+  }
+
+  .unordered-list li {
+    margin-left: 0; /* Remove left margin for list items */
+    margin-bottom: 10px; /* Add bottom margin for list items */
+  }
+
+  .hello,
+  .hello1 {
+    position: static; /* Remove absolute positioning for hello and hello1 */
+    margin-top: 10px; /* Add margin to adjust spacing */
+  }
+
+  .content {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .content h2 {
+    font-size: 30px; /* Adjust font size for smaller screens */
+  }
+
+  .img {
+    margin-top: 10px; /* Adjust margin top for image on small screens */
+  }
+}

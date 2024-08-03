@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 class="mt-5 mx-5 mb-3">Add Category</h1>
+  <div class="add-category-form mt-5 mb-5">
+    <div class="mb-2">
+      <div class="text-center msg">{{message}}</div>
+      <div class="text-center msg0">{{message2}}</div>
+    </div>
+    <form [formGroup]="add_category">
+      <div class="form-group">
+        <label for="categoryName">Category Name:</label>
+        <input type="text" id="categoryName" formControlName="category_name">
+      </div>
+      <div *ngIf="f['category_name'].touched && f['category_name'].invalid" style="color:red;" class="msgerror">
+        <div *ngIf="f['category_name'].errors && f['category_name'].errors['category_name']">Email is required.</div>
+      </div>
+      <input style=" border-radius: 5px;" type="submit" value="Add Category" (click)="submit()" [disabled]="add_category.invalid">
+    </form>
+  </div>
+</div>

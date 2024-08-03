@@ -1,0 +1,51 @@
+nav{
+        position: absolute;
+        width: 100%;
+        top: 0vmin;
+        left: 0vmin; 
+        background-color: transparent !important;
+        z-index: 20000;
+        /* background-color: black; */
+        color: white;
+        padding: 3vmin 4vmin;
+}
+.bike{
+        font-size: 4.4vmin;
+        color: rgb(139, 4, 4);
+        margin-right: 1.5vmin;
+        border: 0.3vmin solid white;
+        padding: 1.5vmin;
+        font-weight: 800;
+}
+.title{
+        font-size: 4vmin;
+        letter-spacing: 0.2vmin;
+}
+nav ul li a{
+        font-size: 2.7vmin;
+        letter-spacing: 0.2vmin;
+        margin-left: 2.5vmin;
+        margin-right: 2.5vmin;
+}
+.user{
+        font-size: 3vmin;
+}
+.username{
+        font-size: 2.8vmin;
+        letter-spacing: 0.2vmin;
+        margin-left: 2vmin;
+}
+
+/* footer */
+
+footer{
+        background-color: rgb(33, 34, 42);
+}
+footer .rights{
+        background-color: rgba(17, 17, 20, 0.2)
+}
+@media (max-width: 768px) {
+        footer a{
+                font-size: 2.5vmin;
+        }
+}

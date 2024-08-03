@@ -1,0 +1,116 @@
+<div class="body">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <i class="fa-solid fa-person-biking bike rounded-circle"></i>
+                <a class="navbar-brand title" href="#">Bikes Rental</a>
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login" (click)="logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid display-table ">
+        <div class="row display-table-row">
+            <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box0">
+            <div class="col-md-2 col-sm-1 box" id="navigation">
+                <div class="logo">
+                    <a routerLink="/dashboard/homepage">
+                        <img src="../../assets/background.jpg" alt="merkery_logo" class="w-100 visible-xs visible-sm circle-logo" width="200px" style="padding-bottom: 10px; margin-top: -20px;">
+                    </a>
+                </div>
+                <div class="navi d-flex justify-content-center">
+                    <ul class="nav flex-column">
+                        <li class="nav-item dropdown users-dropdown" [style.margin-bottom.px]="getDropdownMenuHeight()">
+                            <a class="nav-link" href="dashboard/homepage">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <span class="hidden-xs hidden-sm">Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown users-dropdown" [style.margin-bottom.px]="getDropdownMenuHeight()">
+                            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" (click)="toggleDropdown($event)">
+                              <i class="fa fa-users"></i>
+                              <span class="hidden-xs hidden-sm" >Users</span>
+                            </a>
+                            <div class="dropdown-menu user-dropdown-menu">
+                                <a class="dropdown-item" routerLink="/dashboard/allusers" style="color: black;">All Users</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown category-dropdown" [style.margin-bottom.px]="getDropdownMenuHeight()">
+                            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" (click)="toggleDropdown($event)" >
+                                <i class="fa fa-list" aria-hidden="true"></i>
+                                <span class="hidden-xs hidden-sm">Categories</span>
+                            </a>
+                            <div class="dropdown-menu  category-dropdown-menu">
+                                <a class="dropdown-item" routerLink="/dashboard/allcategories" style="color: black;">All Categories</a>
+                                <a class="dropdown-item" routerLink="/dashboard/addcategory" style="color: black;">Add Category</a>
+                                <a class="dropdown-item" routerLink="/dashboard/updatecategory" style="color: black;">Update Category</a>
+                            </div>
+                          </li>
+                          <li class="nav-item dropdown users-dropdown" [style.margin-bottom.px]="getDropdownMenuHeight()">
+                            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  (click)="toggleDropdown($event)">
+                                <i class="fa fa-bicycle" aria-hidden="true"></i>
+                                <span class="hidden-xs hidden-sm">Bikes</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" routerLink="/dashboard/allbikes"  style="color:black">All Bikes</a>
+                                <a class="dropdown-item" routerLink="/dashboard/addbike"  style="color:black">Add Bike</a>
+                                <a class="dropdown-item" routerLink="/dashboard/updatebike"  style="color:black">Update Bike</a>
+                                <a class="dropdown-item" routerLink="/dashboard/deletebike"  style="color:black">Delete Bike</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown users-dropdown" [style.margin-bottom.px]="getDropdownMenuHeight()">
+                            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" (click)="toggleDropdown($event)">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span class="hidden-xs hidden-sm">Locations</span>
+                            </a>
+                        
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" routerLink="/dashboard/alllocations"  style="color:black">All Locations</a>
+                                <a class="dropdown-item" routerLink="/dashboard/addlocation"  style="color:black">Add Location</a>
+                                <a class="dropdown-item" routerLink="/dashboard/updatelocation"  style="color:black">Update Location</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown users-dropdown" [style.margin-bottom.px]="getDropdownMenuHeight()">
+                            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" (click)="toggleDropdown($event)">
+                                <i class="fa-solid fa-tag"></i>
+                                <span class="hidden-xs hidden-sm">Offers</span>
+                            </a>
+                        
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" routerLink="/dashboard/alloffers"  style="color:black">All Offers</a>
+                                <a class="dropdown-item" routerLink="/dashboard/addoffer"  style="color:black">Add Offer</a>
+                                <a class="dropdown-item" routerLink="/dashboard/updateoffer"  style="color:black">Update Offer</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown users-dropdown" [style.margin-bottom.px]="getDropdownMenuHeight()">
+                            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="toggleDropdown($event)">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <span class="hidden-xs hidden-sm">Rentals</span>
+                            </a>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" routerLink="/dashboard/allrents" style="color: black;">All Rental</a>
+    
+                            </div>
+                          </li>
+                          
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-10 col-sm-11 display-table-cell v-align">
+                <div class="row">
+                    <header>
+                        <!-- Additional header content -->
+                    </header>
+                </div>
+    
+                <router-outlet></router-outlet> <!-- This is where the routed components will be displayed -->
+    
+            </div>
+        </div>
+    </div>
+    
+</div>

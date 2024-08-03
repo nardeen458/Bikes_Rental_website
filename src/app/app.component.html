@@ -1,0 +1,90 @@
+<div class="bg-light">
+  <nav class="navbar navbar-expand-lg" *ngIf="!isLogin()">
+    <div class="container-fluid d-flex align-items-center">
+      <div class="d-flex align-items-center">
+        <i class="fa-solid fa-person-biking bike rounded-circle"></i>
+        <a class="navbar-brand text-white title" href="#">Bikes Rental</a>
+      </div>
+      <div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white" aria-current="page" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/aboutus">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/bikes">Bikes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/contactus">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/login" (click)="logout()">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <i class="fa-solid fa-user user"></i>
+        <div class="username">{{username}}</div>
+      </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<div *ngIf="!isLogin()">
+  <footer class="text-center text-white">
+    <div class="container-fluid">
+      <section>
+        <div class="row text-center d-flex justify-content-center pt-5">
+          <div class="col-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="/home" class="text-white">Home</a>
+            </h6>
+          </div>
+          
+          <div class="col-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="/aboutus" class="text-white">About us</a>
+            </h6>
+          </div>
+
+          <div class="col-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="/bikes" class="text-white">Bikes</a>
+            </h6>
+          </div>
+
+          <div class="col-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="/contactus" class="text-white">Contact us</a>
+            </h6>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5" />
+
+      <section class="mb-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <p>
+              Welcome to Bikes Rental Service, where we're passionate about cycling and dedicated to providing an exceptional experience for every rider. Founded 2 years ago in Egypt, our journey began with a simple mission: to make biking accessible, convenient, and enjoyable for everyone, and we're here to help you pedal your way to unforgettable experiences.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="text-center p-3 rights">
+      Copyright © 2024 All rights are reserved
+    </div>
+  </footer>
+</div>
+</div>

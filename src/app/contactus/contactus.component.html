@@ -1,0 +1,55 @@
+<header>
+    <div class="header-background">
+      <!-- Background image -->
+    </div>
+</header>
+<h2 class="title text-center w-100"><i>Contact Us</i></h2>
+
+  <div class="container-fluid my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-8 col-xl-8">
+        <div class="card mt-5" style="background-image: linear-gradient(to left, rgb(139, 4, 4), #000000bd);">
+          <div class="card-body">
+            <div class="row">
+              <!-- First Column: Contact Information -->
+              <div class="col-md-6 pt-4">
+                <h1 class="hello4">Contact Information</h1>
+                <p style="font-size: 1.25rem; color: #ffffff;">Fill the form and our team will reach out to you</p>
+                <div class="social">
+                  <a href="#"><i class="fa fa-phone" style="color: rgb(139, 4, 4);"></i> <span style="color: #ffffff;">+91745535752</span></a><br>
+                  <a href="#"><i class="fa fa-envelope" style="color: rgb(139, 4, 4);"></i> <span style="color: #ffffff;">rentbikes117@gmail.com</span></a><br>
+                  <a href="#"><i class="fa fa-location-dot" style="color: rgb(139, 4, 4);"></i> <span style="color: #ffffff;">Egypt</span></a>
+                </div>
+              </div>
+              <!-- Second Column: Contact Form -->
+              <div class="col-md-6">
+                <div class="card" style="background-color: #ffffff; border: none;">
+                  <div class="card-body">
+                    <h1 class="hello2">Contact Us</h1>
+                    <div class="mb-2">
+                      <div class="text-center msg">{{msg}}</div>
+                    </div>
+                    <form [formGroup]="message">
+                      <div class="form-group">
+                        <label for="username" class="hello2">Name:</label>
+                        <input type="text" class="form-control" formControlName="username" id="username" placeholder="Enter first name" readonly>
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="hello2">Email:</label>
+                        <input type="email" class="form-control" formControlName="email" id="email" placeholder="Enter email" readonly>
+                      </div>
+                      <div class="form-group">
+                        <label for="message" class="hello2">Message:</label>
+                        <textarea class="form-control" id="message" rows="3" formControlName="message" placeholder="Enter message"></textarea>
+                      </div>
+                      <input type="submit" class="btn btn-primary btn-block" value="Send Message" (click)="submit()" [disabled]="message.invalid">
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,29 @@
+<div>
+        <h1 class="mt-5 mx-5 mb-3">All Rentals <span>( {{rentals_num}} rentals )</span></h1>
+        <div class="d-flex justify-content-center mt-4 mb-5 mx-sm-5 mx-2 table-responsive">
+                <table class='col-12 table0'>
+                        <thead>
+                                <tr class="bg-white">
+                                        <th class='text-center py-2'>Bike</th>
+                                        <th class='text-center py-2'></th>
+                                        <th class='text-center py-2'>Location</th>
+                                        <th class='text-center py-2'>Discount</th>
+                                        <th class='text-center py-2'>Total</th>
+                                        <th class='text-center py-2'>Payment method</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                                <tr *ngFor="let r of rentals" class="bg-white tr">
+                                        <td class='text-center image px-3'>
+                                                <img class='w-100 rounded' [src]="r.image">
+                                        </td>
+                                        <td class='text-center px-3'>{{r.bike_name}}</td>
+                                        <td class='text-center px-3'>{{r.location_name}}</td>
+                                        <td class='text-center px-3'>${{r.offer}}</td>
+                                        <td class='text-center px-3'>${{r.total}}</td>
+                                        <td class='text-center px-3'>{{r.payment_method}}</td>
+                                </tr>
+                        </tbody>
+                </table>
+        </div>
+</div>

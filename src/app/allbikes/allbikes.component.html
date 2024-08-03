@@ -1,0 +1,25 @@
+<div>
+        <h1 class="mt-5 mx-5 mb-3">All Bikes <span>( {{bikes_num}} bikes )</span></h1>
+        <div class="d-flex justify-content-center mt-4 mb-5 mx-sm-5 mx-2 table-responsive">
+                <table class='col-12 table0'>
+                        <thead class="bg-white">
+                                <tr class="bg-white">
+                                        <th class='text-center py-2'>Bike</th>
+                                        <th class='text-center py-2'></th>
+                                        <th class='text-center py-2'>Cateory</th>
+                                        <th class='text-center py-2'>Description</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                                <tr *ngFor="let b of bikes" class="bg-white tr">
+                                        <td class='text-center image px-3'>
+                                            <img class='w-100 rounded' [src]="b.image">
+                                        </td>
+                                        <td class='text-center px-3'>{{b.bike_name}}</td>
+                                        <td class='text-center px-3'>{{b.category_name}}</td>
+                                        <td class='text-center px-3'>{{b.description}}</td>
+                                    </tr>
+                        </tbody>
+                </table>
+        </div>
+</div>

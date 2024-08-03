@@ -1,0 +1,18 @@
+<div class="bg-light">
+        <div class="header"></div>
+        <h1 class="title text-center w-100">Special Offers</h1>
+
+        <!-- offers section -->
+
+        <div class="container-fluid my-5">
+                <div class="row d-flex justify-content-evenly circle-container">
+                        <div *ngFor="let offer of offers" class="offer col-10 col-sm-8 col-md-3">
+                                <div class="image">
+                                        <img src="../../assets/background5.jpg" class="w-100">
+                                </div>
+                                <div class="text-center my-3 body">{{offer.description}}</div>
+                                <div class="w-100 d-flex justify-content-center"><a href="/rent" class="w-100 text-center">Rent Now</a></div>
+                        </div>
+                </div>
+        </div>
+</div>

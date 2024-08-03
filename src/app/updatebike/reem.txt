@@ -1,0 +1,11 @@
+    toggleDropdown(event: Event) {
+      const target = event.target as HTMLElement;
+      const dropdownMenu = target.nextElementSibling as HTMLElement;
+      const allDropdownMenus = document.querySelectorAll('.dropdown-menu');
+      allDropdownMenus.forEach((menu) => {
+        if (menu !== dropdownMenu) {
+          menu.classList.remove('show');
+        }
+      });
+      dropdownMenu.classList.toggle('show');
+    }

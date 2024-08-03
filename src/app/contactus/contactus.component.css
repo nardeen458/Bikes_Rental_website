@@ -1,0 +1,192 @@
+/* General styles for body and html */
+body, html {
+    margin: 0vmin;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Styles for header */
+  .header-background {
+    background-image: url('../../assets/background4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: relative; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.5);
+  }
+  
+  header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* top: 0vmin; */
+    align-items: center;
+    height: 75vh;
+    color: #ffffff; /* Text color for header */
+  }
+  
+  /* Styling for navigation links */
+  .logo {
+    font-size: 15px;
+    text-decoration: none;
+    color: #ffffff; /* Set color to white */
+    position: relative; /* Ensure links are positioned correctly */
+    z-index: 2; /* Ensure links are above the background image */
+  }
+  ul.unordered-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    z-index: 2; /* Ensure list is above the background image */
+  }
+  ul.unordered-list li {
+    margin-left: 15px;
+  }
+  
+  ul.unordered-list .user-icon {
+    margin-left: auto;
+  }
+  
+  ul.unordered-list a:hover {
+    text-decoration: underline;
+  }
+  
+  .hello {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .hello1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .title {
+    color: white;
+    position: absolute;
+    top: 36%;
+    font-size: 12vmin;
+    letter-spacing: 0.3vmin;
+  }
+  
+  /* Styling for cards and form */
+  .card {
+    margin-bottom: 20px;
+    border: none;
+    background-color: #ffffff71;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0vmin !important;
+  }
+  
+  .card-body {
+    padding: 30px;
+  }
+  
+  .hello2 {
+    color: #000000;
+  }
+  
+  .hello4 {
+    color: #ffffff;
+  }
+  .social a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .social i {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #6e6eff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+  }
+  
+  .btn-primary {
+    /* background-color: #c72929;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; */
+    background-color: rgb(139, 4, 4);
+    border: 0.2vmin solid rgb(139, 4, 4);
+    color: white;
+    font-size: 2.7vmin;
+    padding: 1.5vmin 4vmin;
+    text-decoration: none;
+    margin-bottom: 5vmin;
+    border-radius: 0vmin !important;
+  }
+  
+  /* .btn-primary:hover {
+    background-color: #a02121;
+  } */
+  .text1 {
+    color: white;
+  }
+  
+.msg{
+  font-size: 2.7vmin;
+  color: green;
+}
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .card-body {
+      padding: 20px;
+    }
+    header {
+      height: 40vh; /* Reduce header height for smaller screens */
+      background-position: center;
+      background-image: url(../../assets/1_cQiaTMh5jgkfPDaMMmzyiQ.webp);
+    }
+    .title {
+      top: 20%;
+      font-size: 8vmin;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .card-body {
+      padding: 15px;
+    }
+
+  }
+  

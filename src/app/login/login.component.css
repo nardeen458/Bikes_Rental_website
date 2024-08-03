@@ -1,0 +1,127 @@
+body{
+  background-image: url("../../assets/mbr269.group_intro._rz67723.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0vmin;
+  padding: 0vmin;
+}
+
+.h1{
+  font-size: 8vmin;
+  font-style: italic;
+  margin-bottom: 6vmin;
+  /* color: rgb(26, 24, 24); */
+  color: white;
+}
+
+  .card-body{
+    background-color: aliceblue;
+  }
+
+  .card-body h1{
+    color: rgb(139, 3, 3);
+    font-size: 5vmin;
+    font-style: italic;
+  }
+  .forget{
+    color: rgb(139, 3, 3);
+    text-decoration: none;
+  }
+
+ 
+
+.card-transparent {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    backdrop-filter: blur(5px);
+   
+  }
+  
+  .form-label {
+    color: white;
+  }
+  
+  .form-control {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 10px;
+  
+    
+  }
+  
+  .form-control:focus {
+    box-shadow: none;
+  }
+  
+
+  .card-body {
+    padding: 2rem;
+    background-color: #ffffff88;
+    border: 1px solid #ffffffd5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px; 
+}
+
+ 
+  
+  .form-group {
+    margin-bottom: 1.1rem;
+  }
+  
+  .form-label {
+
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-control {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-control:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .btn.btn-primary {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width:100%
+  }
+  
+  .btn.btn-primary:hover {
+    background-color: #1f5e96;
+  }
+  
+  .msg{
+    font-size: 2.7vmin;
+    color: green;
+}
+.msg0{
+    font-size: 2.7vmin;
+    color: red;
+}
+
+/* Media queries for responsiveness */
+/* @media (max-width: 768px) {
+  .card-transparent {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-transparent {
+    width: 90%;
+  }
+} */

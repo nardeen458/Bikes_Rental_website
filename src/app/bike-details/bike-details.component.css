@@ -1,0 +1,100 @@
+.header{
+        background-image: url(../../assets/background4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 75vh;
+        filter: brightness(0.5);
+        position: relative;
+}
+.title{
+        color: white;
+        position: absolute;
+        top: 36%;
+        font-size: 12vmin;
+        letter-spacing: 0.3vmin;
+        font-style: italic;
+}
+
+/*  */
+
+.box{
+        width: 90%;
+        box-shadow: 0vmin 0vmin 0.3vmin rgb(139, 4, 4);
+}
+.box h1{
+        color: rgb(139, 4, 4);
+        font-size: 5vmin;
+        margin-bottom: 3vmin;
+}
+.paragraph{
+        font-size: 2.7vmin;
+        color: rgb(37, 37, 37);
+        margin-bottom: 4vmin;
+}
+.box a{
+        background-color: rgb(139, 4, 4);
+        border: 0.2vmin solid rgb(139, 4, 4);
+        color: white;
+        font-size: 2.7vmin;
+        padding: 1.5vmin 4vmin;
+        text-decoration: none;
+        margin-bottom: 5vmin;
+}
+.m{
+        margin-bottom: 3vmin !important;
+}
+hr{
+        width: 90%;
+}
+.hr0{
+        width: 100%;
+}
+.hours{
+        font-size: 2.6vmin;
+        color: rgb(32, 32, 32);
+}
+.hours i{
+        color: rgb(139, 4, 4);
+        margin-right: 1.5vmin;
+}
+.price{
+        font-size: 2.6vmin;
+        color: rgb(32, 32, 32);
+}
+.offer{
+        font-size: 2.6vmin;
+        color: green;
+}
+.box ul{
+        margin-bottom: 6vmin !important;
+}
+.loc{
+        color: rgb(139, 4, 4);
+        font-style: italic;
+        font-size: 2.7vmin;
+        font-weight: 600;
+}
+.box ul li{
+        font-size: 2.6vmin;
+        color: rgb(56, 56, 56);
+}
+.strike-through {
+        text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+        .header {
+                height: 40vh; /* Reduce header height for smaller screens */
+                background-position: center;
+                background-image: url(../../assets/1_cQiaTMh5jgkfPDaMMmzyiQ.webp);
+        }
+        .title {
+                top: 20%;
+                font-size: 8vmin;
+        }
+        .contain{
+                flex-direction: column;
+                padding-top: 0vmin !important;
+                align-items: center;
+        }
+}

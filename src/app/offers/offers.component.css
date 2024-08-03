@@ -1,0 +1,53 @@
+.header{
+        background-image: url(../../assets/background4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 75vh;
+        filter: brightness(0.5);
+        position: relative;
+}
+.title{
+        color: white;
+        position: absolute;
+        top: 36%;
+        font-size: 12vmin;
+        letter-spacing: 0.3vmin;
+        font-style: italic;
+}
+
+/* offers cards css */
+
+.offer .body{
+        font-size: 2.8vmin;
+        color: rgb(36, 35, 35);
+        font-weight: 700;
+}
+.offer a{
+        text-decoration: none;
+        background-color: rgb(139, 4, 4);
+        border: 0.2vmin solid rgb(139, 4, 4);
+        color: white;
+        font-size: 2.7vmin;
+        padding-top: 0.7vmin;
+        padding-bottom: 0.7vmin;
+        position: absolute;
+        bottom: 0vmin;
+}
+.offer{
+        border: 0.1vmin solid rgb(169, 167, 167);
+        padding-left: 0vmin !important;
+        padding-right: 0vmin !important;
+        position: relative;
+        margin-bottom: 4vmin;
+}
+@media (max-width: 768px) {
+        .header {
+                height: 40vh; /* Reduce header height for smaller screens */
+                background-position: center;
+                background-image: url(../../assets/1_cQiaTMh5jgkfPDaMMmzyiQ.webp);
+        }
+        .title {
+                top: 20%;
+                font-size: 8vmin;
+        }
+}

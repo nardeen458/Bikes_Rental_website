@@ -1,0 +1,187 @@
+
+   <h1 class="mt-5 mx-5 mb-5">Update Bike</h1>
+   <div class="container">
+     <div class="bike-form">
+      <!-- Main Update Bike Form -->
+    <form *ngIf="showUpdateForm">
+  <div class="form-group">
+    <label for="bikeId">Update what?</label>
+    <div class="custom-select">
+      <select id="bikeId" name="bikeId" [(ngModel)]="selectedField" class="form-control">
+        <option value="" disabled>Choose what you want to update...</option>
+        <option value="bike_name">Bike Name</option>
+        <option value="description">Description</option>
+        <option value="category_id">Category</option>
+        <option value="suitable_age">Suitable Age</option>
+        <option value="image">Image</option>
+      </select>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="onSelectChange()" >Update</button>
+
+
+</form>
+
+<!-- Form for Description -->
+<form [formGroup]="update_description" *ngIf="showDescriptionForm">
+  <div class="mb-2">
+    <div class="text-center msg">{{msg}}</div>
+    <div class="text-center msg0">{{msg1}}</div>
+  </div>
+  <div class="form-group">
+    <label for="bikeId">Bike:</label>
+    <div class="custom-select">
+      <select id="bikeId" formControlName="id">
+        <option value="" disabled selected>Select a bike...</option>
+        <option *ngFor="let b of bikes" [value]="b.id">{{b.bike_name}}</option>
+      </select>
+    </div>
+    <div *ngIf="f2['id'].touched && f2['id'].invalid" style="color:red;" class="msgerror">
+      <div *ngIf="f2['id'].errors && f2['id'].errors['required']">You must choose bike.</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <textarea id="description" formControlName="description" class="form-control"></textarea>
+    <div *ngIf="f2['description'].touched && f2['description'].invalid" style="color:red;" class="msgerror">
+      <div *ngIf="f2['description'].errors && f2['description'].errors['required']">You must enter bike description.</div>
+    </div>
+  </div>
+
+  <input type="submit" class="btn btn-primary" (click)="submit_description()" [disabled]="update_description.invalid" value="Update Description"><br><br>
+  <button type="button" class="btn btn-secondary" (click)="showUpdateForm = true; showDescriptionForm = false;">Back</button>
+</form>
+
+<!-- Form for Bike Name -->
+<form [formGroup]="update_name" *ngIf="showBikeNameForm">
+  <div class="mb-2">
+    <div class="text-center msg">{{message}}</div>
+    <div class="text-center msg0">{{message2}}</div>
+  </div>
+  <div class="form-group">
+    <label for="bikeId">Bike:</label>
+    <div class="custom-select">
+      <select id="bikeId" formControlName="id">
+        <option value="" disabled selected>Select a bike...</option>
+        <option *ngFor="let b of bikes" [value]="b.id">{{b.bike_name}}</option>
+      </select>
+    </div>
+    <div *ngIf="f1['id'].touched && f1['id'].invalid" style="color:red;" class="msgerror">
+      <div *ngIf="f1['id'].errors && f1['id'].errors['required']">You must choose bike.</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="bikeName">Bike Name:</label>
+    <input id="bikeName" name="bikeName" type="text" class="form-control" formControlName="bike_name">
+    <div *ngIf="f1['bike_name'].touched && f1['bike_name'].invalid" style="color:red;" class="msgerror">
+      <div *ngIf="f1['bike_name'].errors && f1['bike_name'].errors['required']">You must enter new bike name.</div>
+    </div>
+  </div>
+
+  <input type="submit" class="btn btn-primary" value="Update Bike Name" (click)="submit_name()" [disabled]="update_name.invalid"><br><br>
+  <button type="button" class="btn btn-secondary" (click)="showUpdateForm = true; showBikeNameForm = false;">Back</button>
+
+</form>
+
+<!-- Form for Category ID -->
+<form [formGroup]="update_category" *ngIf="showCategoryIdForm">
+  <div class="mb-2">
+    <div class="text-center msg">{{message0}}</div>
+    <div class="text-center msg0">{{message1}}</div>
+  </div>
+  <div class="form-group">
+    <label for="bikeId">Bike:</label>
+    <div class="custom-select">
+      <select id="bikeId" formControlName="id">
+        <option value="" disabled selected>Select a bike...</option>
+        <option *ngFor="let b of bikes" [value]="b.id">{{b.bike_name}}</option>
+      </select>
+    </div>
+    <div *ngIf="f3['id'].touched && f3['id'].invalid" style="color:red;" class="msgerror">
+      <div *ngIf="f3['id'].errors && f3['id'].errors['required']">You must choose bike.</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="categoryId">Category:</label>
+    <div class="custom-select">
+      <select id="categoryId" formControlName="category_id">
+        <option value="" disabled selected>Select a category...</option>
+        <option *ngFor="let c of categories" [value]="c.id">{{c.category_name}}</option>
+      </select>
+    </div>
+    <div *ngIf="f3['category_id'].touched && f3['category_id'].invalid" style="color:red;" class="msgerror">
+      <div *ngIf="f3['category_id'].errors && f3['category_id'].errors['required']">You must choose category.</div>
+    </div>
+  </div>
+
+  <input type="submit" class="btn btn-primary" (click)="submit_category()" [disabled]="update_category.invalid" value="Update Bike Category"><br><br>
+  <button type="button" class="btn btn-secondary" (click)="showUpdateForm = true; showCategoryIdForm = false;">Back</button>
+
+</form>
+
+<!-- Form for Suitable Age -->
+<form [formGroup]="update_age" *ngIf="showSuitableAgeForm">
+  <div class="mb-2">
+    <div class="text-center msg">{{message3}}</div>
+    <div class="text-center msg0">{{message4}}</div>
+  </div>
+  <div class="form-group">
+    <label for="bikeId">Bike:</label>
+    <div class="custom-select">
+      <select id="bikeId" formControlName="id">
+        <option value="" disabled selected>Select a bike...</option>
+        <option *ngFor="let b of bikes" [value]="b.id">{{b.bike_name}}</option>
+      </select>
+    </div>
+    <div *ngIf="f4['id'].touched && f4['id'].invalid" style="color:red;" class="msgerror">
+      <div *ngIf="f4['id'].errors && f4['id'].errors['required']">You must choose bike.</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="suitableAge">Suitable Age:</label>
+    <input id="suitableAge" formControlName="suitable_age" type="text" class="form-control">
+    <div *ngIf="f4['suitable_age'].touched && f4['suitable_age'].invalid" style="color:red;" class="msgerror">
+      <div *ngIf="f4['suitable_age'].errors && f4['suitable_age'].errors['required']">You must enter bike suitable age.</div>
+    </div>
+  </div>
+
+  <input type="submit" class="btn btn-primary" (click)="submit_age()" [disabled]="update_age.invalid" value="Update Suitable Age"><br><br>
+  <button type="button" class="btn btn-secondary" (click)="showUpdateForm = true; showSuitableAgeForm = false;">Back</button>
+
+</form>
+
+<!-- Form for Image -->
+<form [formGroup]="update"  *ngIf="showImageForm" enctype="multipart/form-data">
+  <div class="mb-2">
+    <div class="text-center msg">{{message5}}</div>
+    <div class="text-center msg0">{{message6}}</div>
+  </div>
+  <div class="form-group">
+    <label for="bikeId">Bike:</label>
+    <div class="custom-select">
+      <select id="bikeId" formControlName="id">
+        <option value="" disabled selected>Select a bike...</option>
+        <option *ngFor="let b of bikes" [value]="b.id">{{b.bike_name}}</option>
+      </select>
+    </div>
+    
+    <div *ngIf="f['id'].touched && f['id'].invalid" style="color:red;" class="msgerror">
+      <div *ngIf="f['id'].errors && f['id'].errors['required']">You must choose bike.</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="image">Image:</label>
+    <input id="image" formControlName="image" type="file" class="form-control" (change)="onFileChange($event)">
+  </div>
+
+  <input type="submit" class="btn btn-primary" value="Update Image" (click)="submit()" [disabled]="update.invalid"><br><br>
+  <button type="button" class="btn btn-secondary" (click)="showUpdateForm = true; showImageForm = false;">Back</button>
+
+</form>
+      
+      <!-- Add more forms for other fields (category_id, suitable_age, image) similarly -->
+   
+     </div>
+   </div>
+   

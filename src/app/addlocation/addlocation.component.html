@@ -1,0 +1,21 @@
+<div>
+        <h1 class="mt-5 mx-5 mb-3">Add Location</h1>
+        <div class="d-flex justify-content-center">
+                <div class="mt-5 mb-5 mx-5 add-category-form">
+                        <div class="mb-2">
+                                <div class="text-center msg">{{message}}</div>
+                                <div class="text-center msg0">{{message2}}</div>
+                        </div>
+                        <form [formGroup]="addlocation">
+                                <div class="form-group">
+                                        <label for="locationName">Location Name:</label>
+                                        <input type="text" id="locationName" formControlName="location_name">
+                                        <div *ngIf="f['location_name'].touched && f['location_name'].invalid" style="color:red;" class="msgerror">
+                                                <div *ngIf="f['location_name'].errors && f['location_name'].errors['required']">Location name is required.</div>
+                                        </div>
+                                </div>
+                                <input style=" border-radius: 5px;" value="Add Location" [disabled]="addlocation.invalid" (click)="submit()" type="submit">
+                        </form>
+                </div>
+        </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+    <h1 class="mt-5 mx-5 mb-3">Update Category</h1>
+<div class="add-category-form mt-5 mb-5">
+  <div class="mb-2">
+    <div class="text-center msg">{{message}}</div>
+    <div class="text-center msg0">{{message2}}</div>
+  </div>
+<form [formGroup]="update">
+  <div class="form-group">
+    <label for="bikeId">Name</label>
+    <div class="custom-select">
+      <select id="bikeId" formControlName="id">
+        <option value="" disabled selected>Select a category...</option>
+        <option *ngFor="let c of categories" [value]="c.id">{{c.category_name}}</option>
+      </select>
+    </div>
+    <div *ngIf="f['id'].touched && f['id'].invalid" style="color:red;" class="msgerror">
+      <div *ngIf="f['id'].errors && f['id'].errors['required']">You must choose category.</div>
+    </div>
+  </div>
+    
+  <div class="form-group">
+    <label for="newname">New Name</label>
+    <input type="text" id="newname" formControlName="category_name" class="form-control">
+    <div *ngIf="f['category_name'].touched && f['category_name'].invalid" style="color:red;" class="msgerror">
+      <div *ngIf="f['category_name'].errors && f['category_name'].errors['required']">You must choose category.</div>
+    </div>
+  </div>
+    
+    
+  <input type="submit" (click)="submit()" [disabled]="update.invalid" value="Update Category" class="btn btn-primary">
+</form>
+</div>
+  

@@ -1,0 +1,87 @@
+.section{
+        box-shadow: 0vmin 0vmin 1vmin rgb(193, 193, 193);
+        width: 30%;
+        border-bottom: 0.3vmin solid rgb(139, 4, 4);
+}
+.head i{
+        background-color: rgb(139, 4, 4);
+        font-size: 4vmin;
+        padding: 2.5vmin 2.5vmin;
+        color: white;
+        margin-right: 2vmin;
+}
+.head h1{
+        font-size: 3.5vmin;
+        color: rgb(76, 73, 73);
+}
+.text{
+        font-size: 4vmin;
+        font-weight: 700;
+        color: black;
+}
+
+/*  */
+
+.bikes{
+        box-shadow: 0vmin 0vmin 1vmin rgb(193, 193, 193);
+}
+.bikes h1{
+        font-size: 3.5vmin;
+        color: rgb(139, 4, 4);
+}
+.bikes a{
+        text-decoration: none;
+        color: rgb(139, 4, 4);
+        font-size: 2.7vmin;
+}
+.table0{
+        /* box-shadow: 0vmin 0vmin 1vmin rgb(107, 107, 107) !important; */
+        width: fit-content !important;
+        /* margin: auto !important; */
+}
+.image{
+        width: 10% !important;
+}
+.image0{
+        width: 10% !important;
+}
+/* table {
+        border-collapse:separate;
+        border-spacing:0 1.8vmin;
+} */
+/* tr{
+        box-shadow: 0vmin 0vmin 1vmin rgb(144, 144, 144) !important;
+        background-color: rgba(206, 15, 15, 0.759) !important;
+        transition: 0.3s;
+} */
+.tr{
+        height: 10vmin;
+}
+tr td,tr th{
+        background-color: rgba(255, 255, 255, 0.854) !important;
+}
+th,td{
+        font-size: 2.7vmin;
+}
+@media (max-width: 576px) {
+        .section{
+                width: 90%;
+                margin-bottom: 4vmin;
+        }
+        .contain{
+                flex-direction: column;
+                align-items: center;
+                margin-top: 4vmin !important;
+                width: 100%;
+        }
+        .body{
+                padding-left: 2vmin !important;
+                padding-right: 2vmin !important;
+        }
+        .image{
+                width: 25% !important;
+        }
+        .image0{
+                width: 40% !important;
+        }
+}

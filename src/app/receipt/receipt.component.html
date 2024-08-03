@@ -1,0 +1,58 @@
+<body class="d-flex flex-column justify-content-center align-items-center">
+    <div class="receipt mt-4">
+        <div class="receipt-header">
+            <h2>Receipt</h2>
+            <p>Date: {{receipt[0].created_at}}</p>
+        </div>
+        <div class="receipt-body">
+            <div class="d-flex justify-content-between p-2">
+                <div class="receipt-info">
+                    <p><strong>Customer:</strong> {{user[0].username}}</p>
+                    <p><strong>Pick up date/time:</strong> {{receipt[0].pickup_datetime}}</p>
+                </div>
+                <div class="receipt-info">
+                    <p><strong>Email:</strong> {{user[0].email}}</p>
+                    <p><strong>Payment method:</strong> {{receipt[0].payment_method}}</p>
+                </div>
+            </div>
+            <div class="receipt-details">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bike</th>
+                            <th>Code of bike</th>
+                            <th>Duration</th>
+                            <th>Location</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{bike[0].bike_name}}</td>
+                            <td>{{receipt[0].bike_id}}</td>
+                            <td>{{duration[0].duration_time}}</td>
+                            <td>{{location[0].location_name}}</td>
+                            <td>${{duration[0].price}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-right"><strong>Subtotal</strong></td>
+                            <td>${{duration[0].price}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-right"><strong>Discount</strong></td>
+                            <td>${{receipt[0].offer}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-right"><strong>Total</strong></td>
+                            <td><strong>${{receipt[0].total}}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="receipt-footer">
+            <p>Thank you for your purchase!</p>
+        </div>
+    </div>
+    <button class="my-3 print" (click)="printPage()">Print Receipt</button>
+</body>

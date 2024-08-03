@@ -1,0 +1,122 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+h1{
+  font-size: 4vmin;
+}
+h1 span{
+  font-size: 2.7vmin;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+hr {
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+.bike-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select select,input[type="text"] {
+  width: calc(100% - 2px);
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  appearance: none; /* Removes default dropdown arrow in some browsers */
+  -webkit-appearance: none; /* For older versions of Chrome */
+  -moz-appearance: none; /* For older versions of Firefox */
+  background-color: white;
+  cursor: pointer;
+}
+
+.custom-select::after {
+  content: "\25BC"; /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.custom-select select:hover {
+  background-color: #f0f0f0;
+}
+
+.custom-select select:focus {
+  outline: none;
+  border-color: #80bdff; /* Example focus style */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Example focus style */
+}
+
+
+input[type="submit"] {
+  background-color: #b31b1b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; /* Make button full width */
+}
+
+input[type="submit"]:hover {
+  background-color: #931313;
+}
+button[type="submit"] {
+  background-color: #b31b1b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; /* Make button full width */
+}
+
+button[type="submit"]:hover {
+  background-color: #931313;
+}
+.msg{
+  font-size: 2.7vmin;
+  color: green;
+}
+.msg0{
+  font-size: 2.7vmin;
+  color: red;
+}

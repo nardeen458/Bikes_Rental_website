@@ -1,0 +1,173 @@
+.body{
+    background-color: rgb(245, 245, 245);
+    /* background-color: rgb(255, 244, 244); */
+}
+nav{
+    /* position: absolute;
+    width: 100%;
+    top: 0vmin;
+    left: 0vmin;  */
+    position: sticky;
+    top: 0vmin;
+    left: 0vmin;
+    width: 100%;
+    z-index: 20000;
+    background-color: white;
+    color: black;
+    padding: 2.3vmin 4vmin;
+    box-shadow: 0vmin 0.2vmin 1vmin rgb(163, 163, 163);
+}
+.bike{
+    font-size: 4.4vmin;
+    color: rgb(139, 4, 4);
+    margin-right: 1.5vmin;
+    border: 0.3vmin solid black;
+    padding: 1.5vmin;
+    font-weight: 800;
+}
+.title{
+    font-size: 4vmin;
+    letter-spacing: 0.2vmin;
+    color: black;
+}
+
+/* Apply some general styles to improve readability */
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+} */
+
+.container-fluid {
+    padding: 0;
+}
+
+/* Style the navigation bar */
+#navigation {
+    background-color: white;
+    color: #000000;
+    padding-top: 20px;
+    height: 120vh; 
+}
+.box{
+    /* z-index: 40000; */
+    box-shadow: 0.1vmin 0vmin 0.5vmin rgb(163, 163, 163);
+    height: 87.5vh !important;
+    position: fixed !important;
+    left: 0vmin;
+}
+
+.box0{
+    height: 87.5vh !important;
+}
+
+/* .navi ul {
+    list-style-type: none;
+    padding-left: 0;
+} */
+
+.navi ul li {
+    padding: 10px 0;
+}
+
+.navi ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
+/* Style the main content area */
+.display-table {
+    width: 100%;
+    /* height: 100vh; */
+}
+
+
+.header-rightside ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.header-rightside ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+/* Style the user dropdown menu */
+.dropdown-menu {
+    min-width: 200px;
+    
+}
+.dropdown-item{
+    color:#000000
+}
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu li a {
+    color: #000000;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f5f5f5;
+}
+.nav-item a{
+    font-size: 3vmin !important;
+    font-weight: 400;
+}
+
+.nav-item a i{
+    margin-right: 2vmin;
+    /* color: rgb(139, 4, 4); */
+}
+
+/* Add background color on hover for second and third list items */
+.navi ul li:nth-child(1):hover,
+.navi ul li:nth-child(2):hover,
+.navi ul li:nth-child(3):hover ,
+.navi ul li:nth-child(4):hover,
+.navi ul li:nth-child(5):hover,
+.navi ul li:nth-child(6):hover,
+.navi ul li:nth-child(7):hover{
+    background-color: #a09b9b; /* Change to desired hover color */
+    border-radius: 5px;
+    padding: 5px;
+}
+ /* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dropdown-menu {
+    position: relative;
+    /* other styles */
+  }
+
+  @media (max-width: 500px) {
+    .box {
+        position: static !important;
+        height: auto !important;
+        box-shadow: none;
+    }
+    .box0{
+        height: auto !important;
+    }
+    .display-table {
+        margin-left: 0 !important; /* Adjust as necessary */
+    }
+    .navi ul {
+        margin: 5px !important;
+        flex-direction: row !important; /* Allow wrapping on smaller screens */
+        list-style: none;
+    }
+    .navi ul li {
+        flex: 1 0 auto; /* Distribute items evenly */
+        text-align: center; /* Center-align items */
+    }
+}
+
+

@@ -1,0 +1,44 @@
+
+h1{
+        font-size: 4vmin;
+}
+h1 span{
+        font-size: 2.7vmin;
+}
+hr{
+        width: 92%;
+        margin: auto;
+}
+
+/*  */
+
+.table0{
+        /* box-shadow: 0vmin 0vmin 1vmin rgb(107, 107, 107) !important; */
+        width: 100% !important;
+        /* margin: auto !important; */
+}
+th,td{
+        font-size: 2.7vmin;
+}
+.image{
+        width: 10% !important;
+}
+table {
+        border-collapse:separate;
+        border-spacing:0 1.8vmin;
+}
+tr{
+        box-shadow: 0vmin 0vmin 1vmin rgb(144, 144, 144) !important;
+        /* background-color: rgba(206, 15, 15, 0.759) !important; */
+        transition: 0.3s;
+}
+.tr{
+        height: 13vmin;
+}
+tr td,tr th{
+        background-color: rgba(255, 255, 255, 0.854) !important;
+}
+/* .padding{
+        padding-top:3.5vmin !important;
+        padding-bottom:3.5vmin !important;
+} */

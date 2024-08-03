@@ -1,0 +1,21 @@
+<div>
+        <h1 class="mt-5 mx-5 mb-3">Add Offer</h1>
+        <div class="d-flex justify-content-center">
+                <div class="mt-5 mb-5 mx-5 add-category-form">
+                        <div class="mb-2">
+                                <div class="text-center msg">{{message}}</div>
+                                <div class="text-center msg0">{{message2}}</div>
+                        </div>
+                        <form [formGroup]="addoffer">
+                                <div class="form-group">
+                                        <label for="description">Offer Description:</label>
+                                        <input type="text" id="description" formControlName="description">
+                                        <div *ngIf="f['description'].touched && f['description'].invalid" style="color:red;" class="msgerror">
+                                                <div *ngIf="f['description'].errors && f['description'].errors['required']">Location name is required.</div>
+                                        </div>
+                                </div>
+                                <input style=" border-radius: 5px;" value="Add Offer" [disabled]="addoffer.invalid" (click)="submit()" type="submit">
+                        </form>
+                </div>
+        </div>
+</div>

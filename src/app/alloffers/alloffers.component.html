@@ -1,0 +1,9 @@
+<div>
+        <h1 class="mt-5 mx-5 mb-3">All offers <span>( {{offers_num}} offers )</span></h1>
+        <div class="mt-5 mb-5 mx-5">
+                <div *ngFor="let o of offers" class="d-flex justify-content-between align-items-center bg-white text-center mb-3 text">
+                        <h4>{{o.description}}</h4>
+                        <i class="fa-solid fa-trash" (click)="todelete(o)"></i>
+                </div>
+        </div>
+</div>

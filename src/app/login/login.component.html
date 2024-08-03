@@ -1,0 +1,52 @@
+<!-- <div>{{message}}</div> -->
+
+<body class="d-flex flex-column justify-content-center align-items-center">
+  <h1 class="h1">Welcome To Bikes Rental</h1>
+  <form [formGroup]="login" class="col-12 col-md-6">
+<div class="container-fluid">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 col-md-12 col-lg-12">
+          <div class="card-transparent">
+            <div class="card-body">
+              <h1 style="text-align: center;color: rgb(139, 3, 3);">Log In</h1>
+
+              <div class="mb-2">
+                <div class="text-center msg">{{message}}</div>
+                <div class="text-center msg0">{{message2}}</div>
+              </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email address:</label>
+                <input type="email" id="email" class="form-control" formControlName="email">
+                <div *ngIf="f['email'].touched && f['email'].invalid" style="color:red;" class="msgerror">
+                  <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+                  <div *ngIf="f['email'].errors && f['email'].errors['email']">Invalid Email.</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                  <label for="pass0" class="form-label">Password:</label>
+                  <input type="password" id="pass0" class="form-control" formControlName="password">
+                  <div *ngIf="f['password'].touched && f['password'].invalid" style="color:red;" class="msgerror">
+                    <div *ngIf="f['password'].errors && f['password'].errors['required']">Password is required.</div>
+                  </div> 
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary " value="Login" (click)="submit()" [disabled]="login.invalid" style="background-color: rgb(139, 3, 3);"  >Log In</button>
+              </div>
+              <div class="form-group d-flex justify-content-center align-items-center">
+                <label>Don't have an account ?</label>
+                <a class="forget m-1" href="/signup">Sign Up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+    
+</body>
+
+
+
+

@@ -1,0 +1,89 @@
+<div class="px-5 pb-5 container-fluid body">
+        <div class="my-5 d-flex justify-content-between contain">
+                <div class="bg-white py-4 rounded section">
+                        <div class="d-flex align-items-center justify-content-evenly head">
+                                <i class="fa fa-calendar rounded-circle"></i>
+                                <h1>Total Rentals</h1>
+                        </div>
+                        <div class="text-center mt-3 text">{{rentals_num}}</div>
+                </div>
+                <div class="bg-white py-4 rounded section">
+                        <div class="d-flex align-items-center justify-content-around head">
+                                <i class="fa fa-users rounded-circle"></i>
+                                <h1>Total Users</h1>
+                        </div>
+                        <div class="text-center mt-3 text">{{users_num}}</div>
+                </div>
+                <div class="bg-white py-4 rounded section">
+                        <div class="d-flex align-items-center justify-content-around head">
+                                <i class="fa fa-bicycle rounded-circle"></i>
+                                <h1>Total Bikes</h1>
+                        </div>
+                        <div class="text-center mt-3 text">{{bikes_num}}</div>
+                </div>
+        </div>
+
+        <!--  -->
+
+        <div class="col-12 bg-white rounded px-3 py-4 mb-5 bikes">
+                <div class="d-flex justify-content-between align-items-center px-3 mb-3">
+                        <h1>Bikes overview</h1>
+                        <a href="/dashboard/allbikes">View all</a>
+                </div>
+                <div class="table-responsive">
+                        <table class='table0 col-12'>
+                                <thead class="bg-white">
+                                        <tr>
+                                                <th class='text-center py-2'>Bike</th>
+                                                <th class='text-center py-2'>Category</th>
+                                                <th class='text-center py-2'>Description</th>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                        <tr *ngFor="let b of bikes" class="bg-white tr">
+                                                <td class='text-center image px-3'>
+                                                        <img class='w-100 rounded' [src]="b.image">
+                                                </td>
+                                                <td class='text-center px-3'>{{b.category_name}}</td>
+                                                <td class='text-center px-3'>{{b.description}}</td>
+                                        </tr>
+                                </tbody>
+                        </table>
+                </div>
+        </div>
+
+        <!--  -->
+
+        <div class="col-12 bg-white rounded px-3 py-4 bikes">
+                <div class="d-flex justify-content-between align-items-center px-3 mb-3">
+                        <h1>Rentals</h1>
+                        <a href="/dashboard/allrents">View all</a>
+                </div>
+                <div class="table-responsive">
+                        <table class='table0 col-12'>
+                        <thead class="bg-white">
+                                <tr>
+                                        <th class='text-center py-2'>Bike</th>
+                                        <th class='text-center py-2'></th>
+                                        <th class='text-center py-2'>Location</th>
+                                        <th class='text-center py-2'>Discount</th>
+                                        <th class='text-center py-2'>Total</th>
+                                        <th class='text-center py-2'>Payment method</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                                <tr *ngFor="let r of rentals" class="bg-white tr">
+                                        <td class='text-center image0 px-3'>
+                                                <img class='w-100 rounded' [src]="r.image">
+                                        </td>
+                                        <td class='text-center px-3'>{{r.bike_name}}</td>
+                                        <td class='text-center px-3'>{{r.location_name}}</td>
+                                        <td class='text-center px-3'>${{r.offer}}</td>
+                                        <td class='text-center px-3'>${{r.total}}</td>
+                                        <td class='text-center px-3'>{{r.payment_method}}</td>
+                                </tr>
+                        </tbody>
+                </table>
+                </div>
+        </div>
+</div>

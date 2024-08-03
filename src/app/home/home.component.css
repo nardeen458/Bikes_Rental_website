@@ -1,0 +1,193 @@
+.img0{
+        filter: brightness(0.6);
+        height: 100vh;
+        position: relative;
+}
+.show{
+        height: 100vh;
+        position: relative;
+}
+.caption0{
+        position: absolute;
+        top: 27%;
+        color: white;
+        margin-left: 15vmin;
+        width: fit-content;
+} 
+.caption0 h5{
+        font-size: 12vmin;
+        letter-spacing: 0.1vmin;
+        margin-bottom: 7vmin;
+        line-height: 17vmin;
+        font-style: italic;
+}
+.caption0 a{
+        color: white;
+        text-decoration: none;
+        border: 0.2vmin solid white;
+        background-color: rgba(255, 255, 255, 0.187);
+        padding: 1.5vmin 4vmin;
+        font-size: 2.8vmin;
+        width: fit-content;
+}
+.caption0 i{
+        margin-left: 1.5vmin;
+}
+.caption0 p{
+        font-size: 3vmin;
+        font-style: italic;
+        color: rgb(139, 4, 4);
+        font-weight: 800;
+        letter-spacing: 0.1vmin;
+}
+
+/*  */
+
+.header h1{
+        font-size: 5.5vmin;
+        font-weight: 700;
+        letter-spacing: 0.2vmin;
+}
+.box{
+        position: relative;
+        box-shadow: 0vmin 0vmin 0.7vmin gray;
+        cursor: pointer;
+        transition: 0.3s;
+}
+.box img{
+        height: 30vmin;
+}
+.show0{
+        text-decoration: none;
+        color: white;
+        font-size: 2.8vmin;
+        background-color: rgb(139, 4, 4);
+        border: 0.2vmin solid rgb(139, 4, 4);
+        padding: 1vmin 3vmin;
+        /* margin: auto; */
+        transition: 0.3s;
+}
+.box .rent{
+        position: absolute;
+        top: 0vmin ;
+        left: 0vmin;
+        width: 100%;
+        text-decoration: none;
+        background-color: rgb(43, 42, 42);
+        text-align: center;
+        color: white;
+        padding: 1.5vmin 0vmin;
+        display: none;
+        transition: 0.3s;
+}
+.box:hover .rent{
+        display: block;
+}
+.box select{
+        width: 70%;
+        padding: 0.7vmin 1vmin;
+}
+.text{
+        padding: 0vmin 2vmin;
+}
+/* .box{
+        position: relative;
+        box-shadow: 0vmin 0vmin 0.7vmin gray;
+        transition: 0.3s;
+}
+.box a{
+        position: absolute;
+        top: 0vmin ;
+        left: 0vmin;
+        width: 100%;
+        text-decoration: none;
+        background-color: rgb(43, 42, 42);
+        text-align: center;
+        color: white;
+        padding: 1.5vmin 0vmin;
+        display: none;
+        transition: 0.3s;
+}
+.box:hover a{
+        display: block;
+}
+select{
+        width: 70%;
+        padding: 0.7vmin 1vmin;
+}
+.text{
+        padding: 0vmin 2vmin;
+} */
+.more a{
+        text-decoration: none;
+        color: white;
+        font-size: 2.8vmin;
+        background-color: rgb(139, 4, 4);
+        border: 0.2vmin solid rgb(139, 4, 4);
+        padding: 1vmin 3vmin;
+        transition: 0.3s;
+}
+.more a:hover{
+        background-color: rgb(43, 42, 42);
+        border-color: rgb(43, 42, 42);
+}
+
+/*  */
+
+.cards div{
+        border: 0.3vmin solid rgb(139, 4, 4);
+        background-color: rgb(234, 216, 216);
+}
+.cards div i{
+        font-size: 5vmin;
+        padding: 2.5vmin 3vmin;
+        color: rgb(139, 4, 4);
+}
+.cards h3{
+        font-size: 3.2vmin;
+        font-weight: 700;
+}
+
+/* */
+
+.contain{
+        background-image: url(../../assets/back2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-left: 10vmin;
+}
+.contain h1{
+        color: white;
+        font-size: 10vmin;
+        line-height: 13vmin;
+        margin-bottom: 7vmin;
+}
+.contain p{
+        color: white;
+        color: 3vmin;
+}
+.contain a{
+        text-decoration: none;
+        color: white;
+        border: 0.2vmin solid transparent;
+        background-color: rgba(255, 255, 255, 0.292);
+        font-size: 2.8vmin;
+        padding: 1.3vmin 4vmin;
+}
+
+@media (max-width: 768px) {
+        .caption0 h5{
+                font-size: 8vmin;
+        }
+        .cards{
+                margin-bottom: 3vmin;
+        }
+}
+@media (max-width: 350px) {
+        .img0{
+                height: 60vh;
+        }
+        .show{
+                height: 60vh;
+        }
+}

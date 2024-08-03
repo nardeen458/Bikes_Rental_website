@@ -1,0 +1,86 @@
+.header{
+        background-image: url(../../assets/background4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 75vh;
+        filter: brightness(0.5);
+        position: relative;
+}
+.title{
+        color: white;
+        position: absolute;
+        top: 36%;
+        font-size: 12vmin;
+        letter-spacing: 0.3vmin;
+        font-style: italic;
+}
+
+/*  */
+
+/* .form{
+        box-shadow: 0vmin 0vmin 0.2vmin rgb(139, 4, 4);
+} */
+.form h1{
+        color: rgb(139, 4, 4);
+        font-size: 4vmin;
+        font-style: italic;
+}
+.input{
+        /* border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 0.2vmin solid rgb(139, 4, 4);
+        margin-bottom: 4vmin;
+        padding: 1.3vmin 2vmin;
+        font-size: 2.7vmin;
+        color: rgb(116, 112, 112); */
+        /* border: 0.2vmin solid rgb(54, 50, 50); */
+        font-size: 2.7vmin;
+        border: none;
+        color: rgb(116, 112, 112);
+        margin-bottom: 4vmin;
+        padding: 1.5vmin 2vmin;
+        background-color: rgba(255, 255, 255, 0.38);
+        box-shadow: 0vmin 0vmin 0.3vmin rgb(145, 143, 143);
+}
+.submit{
+        background-color: rgb(139, 4, 4);
+        border: 0.2vmin solid rgb(139, 4, 4);
+        color: white;
+        font-size: 2.7vmin;
+        padding: 1.3vmin 0vmin;
+}
+.msg{
+        font-size: 2.7vmin;
+        color: green;
+}
+
+/*  */
+
+.credit{
+        position: fixed;
+        top: 0vmin;
+        z-index: 30000;
+        display: none;
+}
+.credit label{
+        font-size: 2.8vmin;
+        color: rgb(44, 42, 42);
+}
+
+@media (max-width: 768px) {
+        .header {
+                height: 40vh; /* Reduce header height for smaller screens */
+                background-position: center;
+                background-image: url(../../assets/1_cQiaTMh5jgkfPDaMMmzyiQ.webp);
+        }
+        .title {
+                top: 20%;
+                font-size: 8vmin;
+        }
+        .contain{
+                flex-direction: column;
+                padding-top: 0vmin !important;
+                align-items: center;
+        }
+}

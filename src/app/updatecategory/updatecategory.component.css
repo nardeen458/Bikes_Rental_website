@@ -1,0 +1,115 @@
+/* General reset */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  font-size: 4vmin;
+}
+
+.add-category-form {
+  width: 100%; /* Adjust width as needed */
+  max-width: 600px; /* Limit width for larger screens */
+  margin: 20px auto;
+  padding: 30px; /* Adjust padding as needed */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-category-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select select {
+  width: calc(100% - 2px);
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  appearance: none; /* Removes default dropdown arrow in some browsers */
+  -webkit-appearance: none; /* For older versions of Chrome */
+  -moz-appearance: none; /* For older versions of Firefox */
+  background-color: white;
+  cursor: pointer;
+}
+
+.custom-select::after {
+  content: "\25BC"; /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.custom-select select:hover {
+  background-color: #f0f0f0;
+}
+
+.custom-select select:focus {
+  outline: none;
+  border-color: #80bdff; /* Example focus style */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Example focus style */
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #80bdff; /* Example focus style */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Example focus style */
+}
+
+.btn-primary {
+  background-color: #b31b1b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; /* Make button full width */
+}
+
+.btn-primary:hover {
+  background-color: #931313; /* Darker red on hover */
+}
+
+.msg {
+  font-size: 2.7vmin;
+  color: green;
+}
+
+.msg0 {
+  font-size: 2.7vmin;
+  color: red;
+}

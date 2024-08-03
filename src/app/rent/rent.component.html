@@ -1,0 +1,78 @@
+<div class="bg-light">
+
+        <div class="header"></div>
+        <h1 class="title text-center w-100">Rent a Bike</h1>
+
+        <!-- Rent Form -->
+
+        <div class="d-flex justify-content-center py-5 mt-5">
+                <div class="w-75 pt-2 pb-5 form mb-5">
+                        <h1 class="mb-4">Rent Now</h1>
+                        <hr class="col-11 w-100 m-auto">
+                        <div class="row mt-5">
+                                <div class="mb-2">
+                                        <div class="text-center msg">{{msg}}</div>
+                                </div>
+                                <form [formGroup]="rent" class="d-flex flex-column align-items-center">
+                                        <div class="col-10 d-flex justify-content-between">
+                                                <input type="text" placeholder="Your Name" formControlName="username" class="col-5 input" readonly>
+                                                <input type="text" placeholder="Your Phone Number" formControlName="phone_number" class="col-5 input">
+                                        </div>
+                                        <input type="email" placeholder="Your Email" formControlName="email" class="col-10 input" readonly>
+                                        <div class="col-10 d-flex justify-content-between">
+                                                <input type="datetime-local" placeholder="Pick Up Date/Time" formControlName="pickup_datetime" class="col-5 input">
+                                                <select class="col-5 input" formControlName="location_id">
+                                                        <option value="" disabled selected>Pick Up Location</option>
+                                                        <option *ngFor="let l of locations" [value]="l.id">{{l.location_name}}</option>
+                                                </select>
+                                        </div>
+                                        <div class="col-10 d-flex justify-content-between">
+                                                <select class="col-5 input" formControlName="bike_id">
+                                                        <option value="" disabled selected>Bike</option>
+                                                        <option *ngFor="let b of bikes" [value]="b.id">{{b.bike_name}}</option>
+                                                </select>
+                                                <select class="col-5 input" formControlName="duration_id">
+                                                        <option value="" disabled selected>Duration Time</option>
+                                                        <option *ngFor="let d of durations" [value]="d.id">{{d.duration_time}}</option>
+                                                </select>
+                                        </div>
+                                        <select class="col-10 input" formControlName="payment_method" (click)="value($event)">
+                                                <option value="" disabled selected>Bayment Method</option>
+                                                <option value="cash">Cash</option>
+                                                <option value="credit card">Credit card</option>
+                                        </select>
+                                        <div class="col-10 mt-3 d-flex justify-content-center">
+                                                <input type="submit" value="Rent" (click)="submit()" [disabled]="rent.invalid" class="col-4 submit">
+                                        </div>
+                                </form>
+                        </div>
+                </div>
+        </div>
+
+        <!--  -->
+
+        <div class="justify-content-center align-items-center bg-light h-100 w-100 credit">
+                <div class="w-75 pt-2 pb-5 bg-light form">
+                        <h1 class="mb-4">Credit Card</h1>
+                        <hr class="col-11 w-100 m-auto">
+                        <div class="row mt-5">
+                                <div class="mb-2">
+                                        <div class="text-center msg">{{msg}}</div>
+                                </div>
+                                <form [formGroup]="credit" class="d-flex flex-column align-items-center">
+                                        <div class="col-10">
+                                                <label for="credit_num" class="mb-3">Credit Number</label>
+                                                <input type="text" formControlName="credit_number" id="credit_num" class="col-12 input">
+                                        </div>
+                                        <div class="col-10">
+                                                <label for="credit_pass" class="mb-3">Credit Password</label>
+                                                <input type="password" formControlName="credit_password" id="credit_pass" class="col-12 input">
+                                        </div>
+                                        <div class="col-10 mt-3 d-flex justify-content-center">
+                                                <input type="submit" value="Submit" (click)="submit0()" [disabled]="credit.invalid" class="col-4 submit">
+                                        </div>
+                                </form>
+                        </div>
+                </div>
+        </div>
+</div>

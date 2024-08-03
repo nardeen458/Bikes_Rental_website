@@ -1,0 +1,68 @@
+h1{
+        font-size: 4vmin;
+}
+h1 span{
+        font-size: 2.7vmin;
+}
+
+/*  */
+
+
+.add-category-form, .category-form {
+        width: 600px; /* Adjust the width as needed */
+        margin: 20px auto;
+        padding: 30px; /* Adjust padding for more height if necessary */
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.add-category-form h2, .category-form h2 {
+        margin-bottom: 20px;
+}
+
+.form-group {
+        margin-bottom: 20px;
+        text-align: left;
+}
+
+.form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+}
+
+.form-group input[type="text"], 
+.form-group select {
+        width: 100%;/* Adjust width for inputs and selects */
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+}
+
+input[type="submit"] {
+        background-color: #b31b1b;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        width:100%
+}
+
+input[type="submit"]:hover {
+        background-color: #b41b1b; /* Darker red on hover */
+}
+
+.msg{
+        font-size: 2.7vmin;
+        color: green;
+}
+.msg0{
+        font-size: 2.7vmin;
+        color: red;
+}

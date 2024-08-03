@@ -1,0 +1,123 @@
+<body class="d-flex flex-column justify-content-center align-items-center py-5">
+  <h1 class="h1">Welcome To Bikes Rental</h1>
+  <form [formGroup]="signup" class="col-12 col-md-6">
+<div class="container">
+
+      <div class="row d-flex justify-content-center align-items-center">
+      
+        <div class="col-12 col-md-12 col-lg-12">
+          <div class="card-transparent">
+            <div class="card-body">
+              <h1 style="text-align: center;color: rgb(139, 3, 3);">Sign Up</h1>
+              <div class="mb-2">
+                <div class="text-center msg">{{message}}</div>
+                <div class="text-center msg0">{{message2}}</div>
+              </div>
+              
+              <div class="form-group">
+                <label for="name" class="form-label">User Name:</label>
+                <input type="text" id="name" class="form-control" formControlName="username">
+                <div *ngIf="f['username'].touched && f['username'].invalid" style="color:red;" class="msgerror" >
+                  <div *ngIf="f['username'].errors && f['username'].errors['required']">user Name is required.</div>
+                  <!-- <div *ngIf="f['email'].errors && f['email'].errors['email']">Invalid Email.</div> -->
+                </div>
+              </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Email address:</label>
+                <input type="text" id="email" class="form-control" formControlName="email">
+                <div *ngIf="f['email'].touched && f['email'].invalid" style="color:red;" class="msgerror">
+                  <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+                  <div *ngIf="f['email'].errors && f['email'].errors['email']">Invalid Email.</div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="age" class="form-label">Age:</label>
+                <input type="number" id="age" class="form-control" formControlName="age">
+                <div *ngIf="f['age'].touched && f['age'].invalid" style="color:red;" class="msgerror">
+                  <div *ngIf="f['age'].errors && f['age'].errors['required']">Age is required.</div>
+                  <div *ngIf="f['age'].errors && f['age'].errors['age']">You must be at least 16 years old to sign up.</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                  <label for="pass" class="form-label">Password:</label>
+                  <input type="password" id="pass" class="form-control" formControlName="password">
+                  <!-- <div style="color: red;">{{message}}</div> -->
+                   <div *ngIf="f['password'].touched && f['password'].invalid" style="color:red;" class="msgerror">
+                    <div *ngIf="f['password'].errors && f['password'].errors['required']">Password is required.</div>
+                  </div> 
+              </div>
+  
+              <div class="form-group">
+                <label for="pass0" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="pass0" formControlName="confirmPassword" >
+                <div *ngIf="f['confirmPassword'].touched && f['confirmPassword'].invalid" style="color:red;" class="msgerror">
+                  <div *ngIf="f['confirmPassword'].errors && f['confirmPassword'].errors['required']">Confirm Password is required.</div>
+                  <div *ngIf="f['confirmPassword'].errors && f['confirmPassword'].errors['passwordMismatch']">Passwords do not match.</div>
+                </div>
+              </div>
+
+ 
+              <div class="form-group d-flex justify-content-center">
+                <input type="submit" class="btn btn-primary m-4" value="Sign Up" (click)="submit()" [disabled]="signup.invalid"  style="background-color: rgb(139, 3, 3);border-radius: 0vmin !important;border: 0.2vmin solid rgb(139, 3, 3);" >
+              </div>
+
+              <div class="tt text-center d-flex justify-content-center align-items-center">
+                Already have an account? <a class="forget" href="/login">Log In</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+    
+</body>
+<!-- 
+
+<body> 
+  <div class="card card-transparent" style="align-items: center; padding:2px">
+    <div class="card-body">
+      <h1  class="hello" style="color: rgb(139, 3, 3);">Sign Up</h1> -->
+      <!-- <label style="color:green;" class="f2">{{message}}</label> 
+      <label style="color:red;" class="f2">{{message2}}</label>  -->
+
+        <!-- <div class="form-group">
+          <label for="firstName" class="form-label" class="text">User Name:</label>
+          <input type="text" class="form-control" id="firstName" placeholder="Enter your first name"  >
+          
+        </div>
+
+        <div class="form-group">
+          <label for="lastName" class="form-label" class="text">Email:</label>
+          <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" >
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label" class="text">Age:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email"  >
+        </div>
+
+        <div class="form-group">
+          <label for="pass" class="form-label text">Password:</label>
+          <input type="password" class="form-control" id="pass" placeholder="Enter your password"  >
+          
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPass" class="form-label text">Confirm Password:</label>
+          <input type="password" class="form-control" id="confirmPass" placeholder="Confirm your password"  >
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="align-items: center; background-color: rgb(139, 3, 3);" >Sign up</button>
+        <div class="">
+            Already have an account?
+            <a href="login">log in</a>
+       
+        </div>
+  
+    </div>
+  </div>
+</body>
+</html> -->

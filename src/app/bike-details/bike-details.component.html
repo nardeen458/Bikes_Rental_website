@@ -1,0 +1,45 @@
+<div class="bg-light">
+
+        <div class="header"></div>
+        <h1 class="title text-center w-100">{{bike.bike_name}}</h1>
+
+        <!--  -->
+
+        <div class="container-fluid d-flex justify-content-center py-5 mt-5 contain">
+                <div class="row bg-white box mb-5">
+                        <div class="col-11 col-md-7 d-flex align-items-center">
+                                <img [src]="bike.image" class="w-100 mx-3">
+                        </div>
+                        <div class="col-11 col-md-5 my-4 px-4 py-3">
+                                <h1>{{bike.bike_name}}</h1>
+                                <p class="paragraph">{{bike.description}}</p>
+                                <div class="d-flex align-items-center justify-content-center px-4 row">
+                                        <div class="col-10">
+                                                <div *ngFor="let d of durations">
+                                                        <div class="d-flex justify-content-between mt-3">
+                                                                <p class="hours"><i class="fa-solid fa-check"></i> {{d.duration_time}}</p>
+                                                                <p class="price" [ngClass]="{'strike-through': rents == 0 || rents == 2 || rents >= 4}">${{d.price}}</p>
+                                                        </div>
+                                                        <hr class="m-auto hr0">
+                                                </div>
+                                        </div>
+                                        <div class="col-2">
+                                                <div *ngFor="let d of discount">
+                                                        <div class="mt-3 d-flex justify-content-center">
+                                                                <p class="offer">{{d.price}}</p>
+                                                        </div>
+                                                        <hr class="m-auto hr0">
+                                                </div>
+                                        </div>
+                                </div>
+                                <p class="loc mt-3">Locations</p>
+                                <div class="d-flex justify-content-center">
+                                        <ul class="row">
+                                                <li *ngFor="let l of locations" class="col-6">{{l.location_name}}</li>
+                                        </ul>
+                                </div>
+                                <a href="/rent">Rent</a>
+                        </div>
+                </div>
+        </div>
+</div>

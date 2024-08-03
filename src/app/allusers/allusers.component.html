@@ -1,0 +1,21 @@
+<div>
+        <h1 class="mt-5 mx-5 mb-3">All Users <span>( {{user_num}} users )</span></h1>
+        <div class="d-flex justify-content-center mt-4 mb-5 mx-sm-5 mx-2 table-responsive">
+                <table class='table0 col-12'>
+                        <thead>
+                                <tr class="bg-white">
+                                        <th class='py-2 px-4'>User</th>
+                                        <th class='py-2 px-4'>Email</th>
+                                        <th class='py-2 px-4'>Age</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                                <tr *ngFor="let u of users" class="bg-white tr">
+                                        <td class='px-4'>{{u.username}}</td>
+                                        <td class='px-4'>{{u.email}}</td>
+                                        <td class='px-4'>{{u.age}}</td>
+                                </tr>
+                        </tbody>
+                </table>
+        </div>
+</div>

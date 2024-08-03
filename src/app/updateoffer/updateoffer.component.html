@@ -1,0 +1,33 @@
+<div>
+        <h1 class="mt-5 mx-5 mb-3">Update Offer</h1>
+        <div class="d-flex justify-content-center">
+                <div class="mt-4 mb-5 mx-5 add-category-form">
+                        <div class="mb-2">
+                                <div class="text-center msg">{{message}}</div>
+                                <div class="text-center msg0">{{message2}}</div>
+                        </div>
+                        <form [formGroup]="update">
+                                <div class="form-group">
+                                        <label for="offer">Offer:</label>
+                                        <div class="custom-select">
+                                                <select id="offer" formControlName="id">
+                                                        <option value="" disabled selected>Select an offer...</option>
+                                                        <option *ngFor="let o of offers" [value]="o.id">{{o.description}}</option>
+                                                </select>
+                                        </div>
+                                        <div *ngIf="f['id'].touched && f['id'].invalid" style="color:red;" class="msgerror">
+                                                <div *ngIf="f['id'].errors && f['id'].errors['required']">You must choose offer.</div>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                        <label for="newdes">New Description</label>
+                                        <input type="text" id="newdes" formControlName="description" class="form-control">
+                                        <div *ngIf="f['description'].touched && f['description'].invalid" style="color:red;" class="msgerror">
+                                                <div *ngIf="f['description'].errors && f['description'].errors['required']">you must enter a new description.</div>
+                                        </div>
+                                </div>
+                                <input style=" border-radius: 5px;" (click)="submit()" [disabled]="update.invalid" type="submit" value="Update Offer">
+                        </form>
+                </div>
+        </div>
+</div>
